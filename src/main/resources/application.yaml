@@ -8,10 +8,11 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:eureka123@localhost:8761/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://eureka:eureka123@localhost:8761/eureka/}
   instance:
     prefer-ip-address: true
 
+# Feign configuration
 feign:
   client:
     config:
